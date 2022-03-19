@@ -1,0 +1,172 @@
+<html>
+	<head>
+		<title>
+			Aldino Ogi Calculator 
+		</title>
+		<script>
+			//function Tombol
+			function tombol(val)
+			{
+			document.getElementById("hasil").value+=val
+			}
+		
+			//function Hasil
+			function penyelesaian()
+			{
+				let a = document.getElementById("hasil").value
+				let b = eval(a)
+			document.getElementById("hasil").value = b
+			}
+		
+			//function Menghapus
+			function hapus()
+			{
+			document.getElementById("hasil").value = ""
+			}
+
+
+		</script>
+		
+		<style>
+
+			.title{
+				background-color:orange;
+				color: black;
+				font-size: 30px;
+				text-align-last: center;
+				font-weight: bold;
+				cursor: pointer;
+				box-shadow: 0px 0px 3px #fdfd;
+				width:100%;
+				height:100%;
+			}
+
+
+			.calculator{
+				width: 550px;
+				height: 500px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+			}
+
+
+			.button{
+				background-color:orange;
+				color: black;
+				font-size: 30px;
+				font-weight: bold;
+				cursor: pointer;
+				box-shadow: 0px 0px 3px #fdfd;
+				width:100%;
+				height:100%;
+
+			}
+
+
+			.clear{
+				background-color:red;
+				color: black;
+				font-size: 30px;
+				font-weight: bold;
+				cursor: pointer;
+				box-shadow: 0px 0px 3px #fdfd;
+				width:100%;
+				height:100%;
+
+			}
+
+
+			.aritmatika {
+				background-color: #FB6E05;
+				color: black;
+				font-size: 30px;
+				font-weight: bold;
+				cursor: pointer;
+				box-shadow: 0px 0px 3px #fdfd;
+				width:100%;
+				height:100%;
+
+			}
+
+
+			.button:hover{
+
+				background: grey;
+				color: black;
+			}
+
+
+			.clear:hover{
+
+				background: grey;
+				color: black;
+			}
+
+
+			.aritmatika:hover{
+
+				background: grey;
+				color: black;
+			}
+
+
+			.output{
+				background-color:white;
+				border: solid grey 2px;
+				font-size: 50px;
+				font-weight: bold;
+				width:100%;
+				height:100%;
+			}
+
+
+		</style>
+	</head>
+	<!-- Calculator -->
+	<body>
+
+		<table class="calculator" bgcolor="grey">
+			<tr>
+				<td colspan="4"><input type="text" class="title" value="Aldino Calculator" /></td>
+			</tr>
+			<tr>
+				<!-- Output-->
+				<td colspan="3"><input type="text" class="output" id="hasil" readonly /></td>
+				<!-- Tombol hapus-->
+				<td><input type="button" class="clear" value="c" onclick="hapus()"/> </td>
+			</tr>
+			<tr>
+				<!-- Tombol - Tombol Kalkulator -->
+				<td><input type="button" class="button" value="1" onclick="tombol('1')"/> </td>
+				<td><input type="button" class="button" value="2" onclick="tombol('2')"/> </td>
+				<td><input type="button" class="button" value="3" onclick="tombol('3')"/> </td>
+				<td><input type="button" class="aritmatika" value="/" onclick="tombol('/')"/> </td>
+			</tr>
+			<tr>
+				<!-- Tombol - Tombol Kalkulator -->
+				<td><input type="button" class="button" value="4" onclick="tombol('4')"/> </td>
+				<td><input type="button" class="button" value="5" onclick="tombol('5')"/> </td>
+				<td><input type="button" class="button" value="6" onclick="tombol('6')"/> </td>
+				<td><input type="button" class="aritmatika" value="-" onclick="tombol('-')"/> </td>
+			</tr>
+			<tr>
+				<!-- Tombol - Tombol Kalkulator -->
+				<td><input type="button" class="button" value="7" onclick="tombol('7')"/> </td>
+				<td><input type="button" class="button" value="8" onclick="tombol('8')"/> </td>
+				<td><input type="button" class="button" value="9" onclick="tombol('9')"/> </td>
+				<td><input type="button" class="aritmatika" value="+" onclick="tombol('+')"/> </td>
+			</tr>
+			<tr>
+				<!-- Tombol - Tombol Kalkulator -->
+				<td><input type="button" class="button" value="." onclick="tombol('.')"/> </td>
+				<td><input type="button" class="button" value="0" onclick="tombol('0')"/> </td>
+				<!-- Tombol penyelesaian -->
+				<td><input type="button" class="button" value="=" onclick="penyelesaian()"/> </td>
+				<td><input type="button" class="aritmatika" value="*" onclick="tombol('*')"/> </td>
+			</tr>
+		</table>
+	</body>
+</html>
